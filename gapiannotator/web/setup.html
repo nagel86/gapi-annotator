@@ -1,0 +1,81 @@
+<!--
+ Copyright (C) 2021, Sebastian Nagel.
+
+ This file is part of the module 'gapiannotator' and is released under
+ the MIT License: https://opensource.org/licenses/MIT
+-->
+<div id="setup-step1" class="table features">
+    <div class="header">Welcome to the gapi-annotator!</div>
+    <div class="row">
+        <div class="col col1">
+            This application allows you to automatically tag your images using the Google API and store the tags in the metadata of the images. It offers the following features:
+            <ul>
+                <li>Tagging based on the image content: cloud, water, animals, cars, wheels, Eifel tower, company logos, dominant colors, ...</li>
+                <li>Optical Character Recognition (OCR) on text within the image, will also be stored as a label.</li>
+                <li>Reverse geocoding: add location (town, region, country) if the image has a GPS tag.</li>
+                <li>All labels can be translated to a desired language.</li>
+                <li>Face detection, whereby the faces can easily be named using the Web GUI.</li>
+                <li>Lossless rotation of images according to their EXIF orientation tag.</li>
+                <li>While running, given folder will continuously be watched for new images to automatically process them.</li>
+                <li>If running on a Synolgy NAS: automatically create synolgy thumbnails, faster than the buildin method. All changes will automatically pushed to the indexing service.</li>
+                <li>Automatic synchronization between simultaneously used Web GUI instances using websockets. This allows, for example, that multiple users can name faces in parallel.</li>
+                <li>The Web GUI is optimized for desktop as well as mobile usage.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="setup-step2" class="table terms-of-use">
+    <div class="header">Terms of use</div>
+    <div class="row">
+        <div class="col col1">
+            The Software is provided &quot;AS IS&quot;, without warrenty of any kind, express or
+            implied, including but not limited to the warrenties of merchantability,
+            fitness for a particular purpose and noninfringement. In no event shall the 
+            authors or copyright holders be liable for any claim, damages or other
+            liability, whether in an action of contract, tort or otherwise, arising from,
+            out of or in connection with the software or the use or other dealing in the software.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col1">
+            The software allows the modification of images, especially their metadata. 
+            The functionality has been extensively tested, but errors can never be excluded. 
+            Therefore I would like to point out again that no responsibility is taken, including 
+            but not limited to data loss, or even if the world ends.
+        </div>
+    </div>
+</div>
+<div id="setup-step3" class="table requirements">
+    <div class="header">Requirements</div>
+    <div class="row">
+        <div class="col col1">
+            First, you need a 
+                <a target="_blank" href="https://developers.google.com/">Google Developer account</a>
+                and have to create a
+                <a target="_blank" href="https://cloud.google.com/docs/authentication/production#create_service_account">service account</a> (credentials file)
+                as well as an 
+                <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/get-api-key#creating-api-keys">API key</a> (stored in a file).
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col1">
+        Furthermore you need to activate the follwing APIs: 
+            <a target="_blank" href="https://console.cloud.google.com/marketplace/product/google/vision.googleapis.com">Cloud Vision</a>,
+            <a target="_blank" href="https://console.cloud.google.com/marketplace/product/google/translate.googleapis.com">Cloud Translation</a>, and 
+            <a target="_blank" href="https://console.cloud.google.com/marketplace/product/google/geocoding-backend.googleapis.com">Geocoding</a>. 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col1">
+        Google APIs have free contingent per month, which should be enough for most users. Here you can find pricing details for the used APIs: 
+            <a target="_blank" href="https://cloud.google.com/vision/pricing">Vision</a>, 
+            <a target="_blank" href="https://cloud.google.com/translate/pricing">Translation</a>, and 
+            <a target="_blank" href="https://developers.google.com/maps/documentation/geocoding/usage-and-billing">Geocoding</a>.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col1">
+        Note: to validate the API key, the credentials file, and that the required APIs are activated, a test request will be sent for each.
+        </div>
+    </div>
+</div>
